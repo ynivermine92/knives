@@ -1,0 +1,19 @@
+.recommend {
+  &__title {
+    padding-top: 40px;
+    border-bottom: 3px solid var(--red);
+    display: inline-block;
+  }
+  .cart {
+    margin-top: 0em;
+  }
+  .cart__item {
+    margin-top: 20px;
+  }
+  .cart__name {
+    line-height: 1.4em;
+  }
+  .cart__content {
+    margin-top: clamp(15px, 2vw, 25px);
+  }
+}

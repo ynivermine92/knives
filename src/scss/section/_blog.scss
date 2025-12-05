@@ -1,0 +1,62 @@
+@use "../base/vars" as *;
+
+.blog {
+  padding: 60px 0px;
+  &__box {
+    display: flex;
+    justify-content: start;
+  }
+  h2 {
+    font-size: clamp(22px, 2vw, 27px);
+    line-height: clamp(2.4rem, 2vw, 4.2rem);
+  }
+  &__items {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px 0px;
+  }
+  &__link {
+    position: relative;
+    display: block;
+  }
+  &__info {
+    position: absolute;
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    gap: 0 5px;
+    right: 40px;
+    top: 20px;
+  }
+  p {
+    position: absolute;
+    color: #fff;
+    @extend %m-500;
+    color: #fff;
+    font-size: clamp(14px, 2vw, 17px);
+    line-height: clamp(1.4rem, 2vw, 2.4rem);
+    bottom: 0;
+    padding: 33px 22px 33px 29px;
+    width: 100%;
+  }
+
+  &__item {
+    padding: 0 18px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+    background: transparent;
+    &:hover {
+      p {
+        border-radius: 0px 0px 14px 14px;
+        background: rgba(200, 0, 0, 1);
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

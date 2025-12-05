@@ -1,0 +1,72 @@
+.feedback {
+  .wrapper {
+    max-width: 850px;
+  }
+  padding-top: 50px;
+
+  &__wrapper {
+    padding: 0;
+  }
+  &__content {
+    background: #232323;
+    padding: 40px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  &__inner {
+    justify-content: space-between;
+  }
+  &__box {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+  }
+
+  .title {
+    line-height: 1.2em;
+
+    max-width: 100%;
+  }
+  .mending__box {
+    margin-top: 30px;
+    background: #303030;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      transition: all 0.5s;
+      transform: rotate(0deg);
+      &.active {
+        transform: rotate(180deg);
+        transition: all 0.5s;
+      }
+    }
+  }
+  .mending__sub-title {
+    color: #ffff;
+  }
+  .mending__input {
+    color: #fff;
+    border-bottom: 2px solid #ffff;
+  }
+  &__text {
+    color: #ffff;
+    line-height: 1.3em;
+    font-size: clamp(14px, 2vw, 16px);
+    margin: 20px 0;
+  }
+  .button {
+    max-width: 233px;
+  }
+
+  @media (max-width: 767.9px) {
+    .button {
+      margin: 0 auto;
+    }
+  }
+}

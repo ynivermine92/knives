@@ -1,0 +1,80 @@
+/* Основной контейнер Swiper */
+.swiper {
+  width: 100%;
+  max-height: 300px; /* Можно изменить под ваши нужды */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Обертка слайдов */
+.swiper-wrapper {
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+/* Отдельный слайд */
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%; /* Каждый слайд занимает всю ширину контейнера */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Пагинация */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Кнопки навигации */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Левая кнопка */
+.swiper-button-prev {
+  left: 10px;
+  background-image: url('data:image/svg+xml;base64,...'); /* Здесь можно добавить SVG иконку стрелки назад */
+}
+
+/* Правая кнопка */
+.swiper-button-next {
+  right: 10px;
+  background-image: url('data:image/svg+xml;base64,...'); /* Аналогично, иконка вперед */
+}
+
+/* Скроллбар */
+.swiper-scrollbar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  height: 4px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Ползунок скроллбара */
+.swiper-scrollbar-drag {
+  height: 100%;
+  background: #007aff;
+  border-radius: 2px;
+}

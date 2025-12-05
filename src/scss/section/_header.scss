@@ -1,0 +1,403 @@
+@use '../base/vars' as *;
+
+// ========================= [ Header styles ] =========================
+
+header{
+    position: relative;
+    z-index: 2;
+}
+.header {
+    background-color: var(--header);
+    po
+    &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__inner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+
+
+        &.active {
+            transform: translateX(0);
+            pointer-events: all;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 3;
+            top: 0;
+        }
+    }
+}
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__basket {
+        fill: var(--white);
+        height: 24px;
+        width: 24px;
+        transition: all 0.5s;
+
+        &:hover {
+            fill: #d373fb;
+            transition: all 0.5s;
+        }
+    }
+
+    &__local {
+        fill: transparent;
+        stroke: #fff;
+        height: 24px;
+        width: 24px;
+        transition: all 0.5s;
+
+        &:hover {
+            stroke: #d373fb;
+            fill: transparent;
+            transition: all 0.5s;
+        }
+    }
+
+    &__connection {
+        stroke: var(--white);
+        fill: transparent;
+        height: 26px;
+        width: 26px;
+        transition: all 0.5s;
+
+        &:hover {
+            stroke: #d373fb;
+            transition: all 0.5s;
+        }
+    }
+
+    &__searsh {
+        stroke: var(--white);
+        fill: transparent;
+        height: 24px;
+        width: 24px;
+        transition: all 0.5s;
+
+        &:hover {
+            stroke: #d373fb;
+            transition: all 0.5s;
+        }
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    &__link {
+        font-size: 18px;
+        color: #fff;
+        margin-left: 10px;
+        transition: all 0.5s;
+
+        &:hover {
+            color: #d373fb;
+            transition: all 0.5s;
+        }
+    }
+
+    &__tell {
+        display: none;
+    }
+
+    @media(max-width:778px) {
+        &__tell {
+            display: block;
+            stroke: var(--white);
+            width: 24px;
+            height: 24px;
+            transition: all 0.5s;
+
+            &:hover {
+                stroke: #d373fb;
+                transition: all 0.5s;
+            }
+        }
+
+        &__link-desktop {
+            display: none;
+        }
+
+        &__link {
+            margin-left: 0px;
+        }
+
+        .select__wrapper {
+            display: none;
+        }
+
+        &__searsh {
+            display: none;
+        }
+
+        &__connection {
+            display: none;
+        }
+
+        &__wrapper-content {
+            display: none;
+        }
+
+    }
+
+    @media(max-width:400px) {
+        & {
+            &__wrapper {
+                gap: 14px;
+            }
+        }
+    }
+}
+
+.logo {
+    a {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media(max-width:778px) {
+        a {
+            right: 0;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+
+        img {
+            max-width: 120px;
+        }
+    }
+}
+
+// ========================== [ Menu styles ] ==========================
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 450px;
+    background: $burgerColor;
+    padding: 150px 27px 150px 44px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform .4s ease, opacity .4s ease;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 2;
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+    }
+
+    &__item {
+        display: flex;
+        position: relative;
+        font-size: 18px;
+        color: var(--white);
+    }
+
+    // .menu__item-link
+    &__item-link {
+        color: var(--white);
+        display: flex;
+        position: relative;
+        transition: 0.5s color;
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -3px;
+            background: var(--white);
+            height: 1px;
+            width: 100%;
+            transform: scale(0);
+            transition: 0.5s transform;
+
+            // Comment if you need border animation
+            display: none;
+        }
+
+        &:hover {
+            color: #d373fb;
+
+            &:after {
+                transform: scale(1);
+            }
+        }
+    }
+    &__detals{
+        display: none;
+    }
+
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
+        z-index: 2;
+        opacity: 0.7;
+    }
+
+    .burger {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    @media(max-width:778px) {
+        .select__wrapper {
+            display: block;
+        }
+
+        .navbar__searsh {
+            display: block;
+        }
+
+        .navbar__connection {
+            display: block;
+        }
+
+        &__detals {
+            display: flex;
+            gap: 0 30px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+    }
+
+    @media(max-width:668px) {
+        & {
+            width: 100%;
+        }
+    }
+
+
+}
+
+.info {
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+        margin-top: 60px;
+    }
+
+    &__item {
+        display: flex;
+        font-size: 15px;
+        color: var(--white);
+    }
+
+    &__item-link {
+        color: var(--white);
+        display: flex;
+        transition: 0.5s color;
+
+        &:hover {
+            color: #d373fb;
+        }
+    }
+
+}
+
+
+// ========================= [ Burger styles ] =========================
+.burger {
+    display: none;
+    background: transparent;
+    z-index: 2;
+
+    display: flex;
+    position: relative;
+    height: 20px;
+    width: 30px;
+
+    &.active {
+
+        &:before {
+            background: var(--white);
+            transform: rotate(45deg);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+            top: 8px;
+        }
+
+        &:after {
+            background: var(--white);
+            transform: rotate(-45deg);
+            bottom: 10px;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+
+        & span {
+            transform: scale(0);
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: var(--white);
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    }
+
+    &:before {
+        height: 2.5px;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        width: 100%;
+        background: var(--white);
+        height: 2px;
+        transform: scale(1);
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    }
+
+}

@@ -1,0 +1,129 @@
+@use "../base/vars" as *;
+
+.footer {
+  padding-top: 44px;
+  background: #272727;
+  color: #fff;
+  overflow: hidden;
+  &__logo {
+    max-width: 194px;
+  }
+  &__inner{
+    display: flex;
+    gap: 20px 50px;
+    padding-bottom: 50px;
+
+  }
+  &__text {
+    font-size: 13px 11px;
+    font-size: clamp(13px, 2vw, 11px);
+    line-height: 2rem;
+    margin-top: 20px;
+  }
+
+  &__items {
+    display: flex;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    padding-bottom: 34px;
+  }
+  &__item-link {
+    color: #fff;
+    font-size: clamp(14px, 2vw, 12px);
+    opacity: 0.5;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 1;
+      transition: all 0.5s;
+    }
+  }
+
+  &__katalog-items {
+    padding-bottom: 60px;
+  }
+
+  &__social-items {
+    padding-bottom: 52px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .title {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+    a {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      background: #2e2e2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        background: #666161;
+        transition: all 0.5s;
+      }
+    }
+
+    img {
+      height: 14px;
+      width: 14px;
+      opacity: 1;
+    }
+  }
+  &__link-tell {
+    font-size: clamp(20px, 2vw, 16px);
+    color: #fff;
+    opacity: 1;
+    transition: all 0.5s;
+    display: block;
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.5s;
+    }
+  }
+
+  &__mail {
+    color: #fff;
+    font-size: clamp(14px, 2vw, 12px);
+    display: block;
+    margin-top: 10px;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.5s;
+    }
+  }
+  &__schedule {
+    font-size: clamp(14px, 2vw, 12px);
+    margin: 20px 0px 10px 0px;
+  }
+  &__address {
+    font-size: clamp(14px, 2vw, 12px);
+    line-height: clamp(1.6rem, 2vw, 1.9rem);
+  }
+  &__bootom{
+    padding: 35px 20px;
+    text-align: center;
+    background: #373737;
+  }
+  &__bootom-text{
+     font-size: 12px;
+    line-height: clamp(1.6rem, 2vw, 1.9rem);
+  }
+  @media(max-width:660px){
+    &{
+      &__social-items{
+        padding-bottom: 20px;
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+/*  p {
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: clamp(1.6rem, 2vw, 2.2rem);
+  } */

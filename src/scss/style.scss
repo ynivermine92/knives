@@ -1,0 +1,53 @@
+
+// cols
+@use "./libs/cols";
+
+// base
+@use "./base/reset";
+@use "./base/global";
+@use "./base/root";
+@use "./base/fonts";
+
+
+//components
+@use "./components/cart";
+@use "./components/select-lang";
+@use "./components/form.scss";
+@use "./components/search.scss";
+@use "./components/button.scss";
+@use "./components/swiper-style.scss";
+@use "./components/fillters.scss";
+
+
+
+
+
+
+// section
+@use "./section/header";
+@use "./section/variantstab";
+@use "./section/hero";
+@use "./section/innovation";
+@use "./section/about";
+@use "./section/blog";
+@use "./section/footer";
+@use "./section/banner";
+@use "./section/catalog";
+@use "./section/categories.scss";
+@use "./section/mending.scss";
+@use "./section/quality.scss";
+@use "./section/advertisSwiper.scss";
+@use "./section/benefit.scss";
+@use "./section/recommend.scss";
+@use "./section/map.scss";
+@use "./section/basket.scss";
+@use "./section/feedback.scss";
+
+
+// Libs
+@use "./libs/swiper";
+@use "./libs/fansybox";
+
+
+
+

@@ -1,0 +1,101 @@
+@use "../base/vars" as *;
+.mending {
+  .title {
+    padding-top: 50px;
+    text-align: center;
+    font-size: clamp(22px, 2vw, 32px);
+    line-height: clamp(2.4rem, 2vw, 4.2rem);
+    color: #fff;
+  }
+  &__link {
+    color: #fff;
+    transition: all 0.5s;
+    display: block;
+    text-align: center;
+    opacity: 1s;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: clamp(22px, 2vw, 32px);
+    &:hover {
+      transition: all 0.5s;
+      opacity: 0.5s;
+    }
+  }
+  &__content {
+    background: #fff;
+    padding: clamp(15px, 5vw, 50px);
+
+
+    display: flex;
+    justify-content: center;
+  }
+  &__form {
+    max-width: 756px;
+    width: 100%;
+  }
+  &__box {
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: rgba(247, 247, 247, 1);
+    position: relative;
+        border-radius: 20px;
+  }
+  &__sub-title {
+    color: #656565;
+    margin-bottom: 10px;
+    font-size: 12px;
+    @extend %m-500;
+  }
+  &__input {
+    border-bottom: 2px solid rgba(79, 79, 79, 1);
+    padding: 10px 0px;
+    background: transparent;
+    color: #656565;
+    width: 100%;
+    cursor: pointer;
+    padding-right: 20px;
+    &::placeholder {
+      color: rgba(173, 172, 172, 1);
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s;
+      transform: rotate(0deg);
+    &.active{
+      transform: rotate(180deg);
+      transition: all 0.5s;
+    }
+  }
+
+  &__sub-title {
+    color: #656565;
+    margin-bottom: 10px;
+    font-size: 12px;
+    @extend %m-500;
+  }
+
+  &__textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    height: 182px;
+    background: transparent;
+
+    &::placeholder {
+      color: rgba(173, 172, 172, 1);
+    }
+  }
+  &__btn{
+    text-align: center;
+    color: rgba(68, 68, 68, 1);
+    &:hover{
+      color: #ffff;
+    }
+  }
+}

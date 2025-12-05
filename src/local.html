@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <!-- map -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="main__body">
+    <!-- Header -->
+    @@include('./html/_header.html')
+
+    <!-- Main Page -->
+    <main>
+      @@include('./html/_map.html')
+
+      <section class="quality pt-5">
+        <div class="wrapper">
+          <ul class="row quality__items pt-5">
+            <li class="col-12 quality__item">
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="quality__image">
+                    <img src="img/quality/1.png" alt="quality" />
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-sm-6 quality__contnent d-flex align-items-center justify-content-center"
+                >
+                  <div class="quality__content">
+                    <h2 class="quality__sub-title">
+                      Исключительное качество без компромиссов
+                    </h2>
+                    <p class="quality__text">
+                      Ножи «Tuotown» — это главный инструмент поваров и секрет
+                      кулинарного мастерства
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="col-12 quality__item">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-6 quality__contnent d-flex align-items-center justify-content-center"
+                >
+                  <div class="quality__content">
+                    <h2 class="quality__sub-title">
+                      Исключительное качество без компромиссов
+                    </h2>
+                    <p class="quality__text">
+                      Ножи «Tuotown» — это главный инструмент поваров и секрет
+                      кулинарного мастерства
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="quality__image">
+                    <img src="img/quality/2.png" alt="quality" />
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- form -->
+          <div class="row">
+            <div class="col-12 form-email">
+              <h2 class="title">Узнавайте первым о новинках и новостях</h2>
+              <form class="form-email__form" action="">
+                <div class="form-email__wrapper">
+                  <input
+                    class="form-email__input"
+                    placeholder="Ваш e-mail"
+                    type="text"
+                    name=""
+                    id=""
+                  />
+                  <button class="form-email__btn">
+                    <svg class="form-email__arrow">
+                      <use xlink:href="img/svg/arrow.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </body>
+
+  <!-- map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="./js/scripts.min.js"></script>
+</html>

@@ -1,0 +1,148 @@
+.variantstab {
+
+    @media(max-width:1240px) {
+        .cart {
+
+
+            &__items {
+                gap: 25px 20px;
+                flex-wrap: wrap;
+            }
+
+            &__item {
+                flex: 0 0 calc(25% - 16px);
+                max-width: 100%;
+            }
+
+            &__main-item {
+                max-width: 100%;
+                width: 100%;
+            }
+
+        }
+    }
+
+
+    @media(max-width:768px) {
+        .cart {
+            &__items {
+                gap: 2px 15px;
+
+            }
+
+            &__item {
+                flex: 0 0 calc(50% - 8px);
+            }
+            &__product{
+                padding:50px 12px ;
+                margin-top: 20px;
+            }
+            &__content{
+                margin-top: 15px;
+                gap: 10px 0;
+            }
+            &__name{
+                line-height: 2rem;
+            }
+
+   
+        }
+
+    }
+}
+
+
+
+.tabs {
+    width: 100%;
+
+    // ===== HEADER 1 =====
+    &__header {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px 0;
+            transition: all 0.5s;
+
+            &:hover {
+                .tabs__svg {
+                    fill: red;
+                }
+
+                .tabs__title {
+                    color: red;
+                }
+            }
+
+            &.active {
+                .tabs__title {
+                    color: red;
+                }
+
+                .tabs__svg {
+                    fill: red;
+                }
+            }
+        }
+    }
+
+    // ===== HEADER 2 =====
+    &__header2 {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+
+        &-item2 {
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+                color: red;
+            }
+
+            &.active {
+                color: red;
+            }
+        }
+    }
+
+    // ===== CONTENT =====
+    &__content,
+    &__content2 {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75px;
+    }
+
+
+
+    // ===== ELEMENTS =====
+    .tabs__title {
+        color: #fff;
+        transition: all 0.5s;
+    }
+
+    &__svg {
+        transition: all 0.5s;
+        fill: #878787;
+        height: 46px;
+        width: 54px;
+    }
+
+
+
+}

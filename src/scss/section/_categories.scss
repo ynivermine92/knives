@@ -1,0 +1,13 @@
+.categories {
+  padding-top: 80px;
+  .cart {
+    margin-top: 0;
+  }
+  .form-email {
+    margin: 10rem 0rem;
+  }
+  h2{
+    font-size: clamp(2rem, 2vw, 2.7rem);
+    line-height: clamp(1.2rem, 2vw, 2.2rem);
+  }
+}

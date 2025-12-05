@@ -1,0 +1,25 @@
+.banner {
+  &__inner {
+    position: relative;
+  }
+  &__image {
+    min-height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .wrapper {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+  }
+  .title {
+    padding-bottom: 20px;
+  }
+  &__sub-title {
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: clamp(1.6rem, 2vw, 2.2rem);
+  }
+}
